@@ -1,0 +1,17 @@
+.sidebar {
+  width: 240px;
+  background: white;
+  transition: 0.3s;
+}
+
+.closed {
+  margin-left: -240px;
+}
+
+.open {
+  margin-left: 0;
+}
+
+.item {
+  padding: 10px;
+}
