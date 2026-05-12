@@ -1,5 +1,5 @@
 import styles from './Sidebar.module.css';
-
+import { NavLink } from 'react-router-dom'
 interface Project {
   id: string;
   name: string;
@@ -19,7 +19,10 @@ export default function Sidebar({ projects, isOpen }: SidebarProps) {
         {projects.map(p => (
           <li key={p.id} className={styles.item}>
             <span className={styles.dot} style={{ background: p.color }} />
-            {p.name}
+            <NavLink to={`/projects/${p.id}`}>
+            
+  {p.name}
+</NavLink>
           </li>
         ))}
       </ul>

@@ -1,16 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { BrowserRouter } from 'react-router-dom'
 
-// 🔥 زيد هاد import
+import './index.css'
+import App from './App'
+
 import { AuthProvider } from './features/auth/AuthContext'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* 🔥 لف App بـ AuthProvider */}
-    <AuthProvider>
-      <App />
-    </AuthProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    </BrowserRouter>
   </StrictMode>,
 )
